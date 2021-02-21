@@ -5,8 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RuletaRR v2.0</title>
+    <meta name="description" content="Ruleta para Fernando Blas Lopez">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/ruleta.png" type="image/x-icon">
 </head>
 <body>
     
+    <div class="mt-1 navpro text-center">
+        <h3>RULETA RR</h3>
+    </div>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-9">
+                <h3>Resultados<strong id=resultSearch></strong></h3>
+                <div id="result">
+                    
+                </div>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary btn-block" onclick="restartArray()">Nuevo analisis</button>
+                <hr>
+                <h4>INGRESAR NÚMERO</h4>
+                <input placeholder="NUMERO" id="number" onchange="submitNumber()" type="number" class="input form-control">
+                <h4 class="mt-2">NÚMEROS CARGADOS</h4>
+                <div id="list">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/payrroll/payroll.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
