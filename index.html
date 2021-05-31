@@ -12,26 +12,27 @@
 </head>
 <body>
     
-    <div class="mt-1 navpro text-center">
-        <h3>RULETA RR</h3>
-    </div>
+    <!-- <div class="mt-1 navpro text-center">
+        <h3>RULETA RR  9N° entrada | 6N° o mas de salida </h3>
+    </div> -->
     <hr>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-9">
-                <h3>Resultados<strong id=resultSearch></strong></h3>
+            <div class="col-11">
+                <!-- <h6>Resultados<strong id=resultSearch></strong></h6> -->
                 <div id="result">
                     
                 </div>
             </div>
-            <div class="col-3">
-                <button class="btn btn-primary btn-block" onclick="restartArray()">Nuevo analisis</button>
+            <div class="col-1">
+                <input placeholder="N°" id="number" onchange="submitNumber()" type="number" class="input form-control">
                 <hr>
-                <h4>INGRESAR NÚMERO</h4>
-                <input placeholder="NUMERO" id="number" onchange="submitNumber()" type="number" class="input form-control">
-                <h4 class="mt-2">NÚMEROS CARGADOS</h4>
+                <button class="btn btn-primary btn-block" onclick="restartArray()">NUEVO</button>
+                <hr>
+                <!-- <h4>INGRESAR NÚMERO</h4>
+                <h4 class="mt-2">NÚMEROS CARGADOS</h4> -->
                 <div id="list">
-
+                    
                 </div>
             </div>
         </div>

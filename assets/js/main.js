@@ -8,11 +8,11 @@ const tableOrder = [0,26,3,35,12,28,7,29,18,22,9,31,14,20,1,33,16,24,5,10,23,8,3
 
 const submitNumber = () => {
     if (numberInput.value >= 0 && numberInput.value <= 36) {
-        if (numberArray.length < 11) {
+        if (numberArray.length < 9) {
             const verification = verifyNumbersArray(numberArray, numberInput.value)
             if (verification == true) {
                 numberArray.push(parseInt(numberInput.value, 10))
-                if (numberArray.length == 11) {
+                if (numberArray.length == 9) {
                     const resultSearch = searchPayrrolls(numberArray)
                     console.log(resultSearch);
                     renderResult(resultSearch)
@@ -23,7 +23,21 @@ const submitNumber = () => {
             }
         }
         else {
-            alert("Ya fueron cargados los 11 numeros")
+            // alert("Ya fueron cargados los 9 numeros")
+            const verification = verifyNumbersArray(numberArray, numberInput.value)
+            if (verification == true) {
+                numberArray.splice(0,1)
+                numberArray.push(parseInt(numberInput.value, 10))
+                if (numberArray.length == 9) {
+                    const resultSearch = searchPayrrolls(numberArray)
+                    console.log(resultSearch);
+                    preRenderResult()
+                    renderResult(resultSearch)
+                }
+            }
+            else {
+                alert("El numero ya fue cargado")
+            }
         }
     }
     else {
@@ -55,8 +69,15 @@ const renderArrayNumbers = numbers => {
 const restartArray = () => {
     list.innerHTML = ""
     resultHtml.innerHTML = ""
-    resultNumber.innerHTML = ""
+    // resultNumber.innerHTML = ""
     numberArray = []
+}
+
+const preRenderResult = () => {
+    list.innerHTML = ""
+    resultHtml.innerHTML = ""
+    // resultNumber.innerHTML = ""
+    // numberArray = []
 }
 
 const searchPayrrolls = (arrayNumbers) => {
@@ -85,7 +106,7 @@ const searchPayrrolls = (arrayNumbers) => {
 const renderResult = result => {
     // const positive = document.getElementById("positive")
     console.log(result);
-    resultNumber.innerHTML = ` = ${result.length}`
+    // resultNumber.innerHTML = ` = ${result.length}`
     for (let i = 0; i < result.length; i++) {
         let html = `
         <div class="grid mt-2">
@@ -190,10 +211,10 @@ const renderResult = result => {
         //         <div class="item-co">${result[i].numberCoincidence[c]}</div>
         //     `
         // }
-        html +=
-        `
-            <div class="coincidences-float">Coincidencias: <strong> ${result[i].numberCoincidence.length}</strong></div>
-        `
+        // html +=
+        // `
+        //     <div class="coincidences-float">Coincidencias: <strong> ${result[i].numberCoincidence.length}</strong></div>
+        // `
         html +=
             `</div>
             </div>

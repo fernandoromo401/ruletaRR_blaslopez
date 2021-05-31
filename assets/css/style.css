@@ -1,12 +1,24 @@
 .navpro{
     background-color: rgb(236, 236, 236);
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .grid{
     width: 100%;
     background-color: rgb(230, 230, 230);
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
+    flex-direction: column;
     height: 120px;
     padding: 5px;
     border-radius: 3px;
@@ -16,16 +28,17 @@
 .grid .title{
     height: 100%;
     width: 10%;
-    background-color: rgb(44, 44, 44);
-    color: white;
+    /* background-color: rgb(44, 44, 44); */
+    /* color: white; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 800;
     font-size: 24px;
 }
+
 .grid .body{
-    padding-left: 15px;
+    padding-left: 5px;
 }
 .grid .body .coincidences{
     display: flex;
@@ -34,38 +47,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25px;
-    height: 25px;
+    width: 23px;
+    height: 23px;
     background-color: white;
     color: black;
     margin: .5px;
     font-size: 18px;
+    font-weight: 500;
 }
 .grid .body .coincidences .item-co-white{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25px;
-    height: 25px;
+    width: 23px;
+    height: 23px;
     background-color: #202020;
     color: white;
     margin: .5px;
     font-size: 18px;
 }
 .red{
-    background-color: #ff6666 !important;
+    background-color: #fd5151 !important;
 }
 .green{
-    background-color: #78c942 !important;
+    background-color: #69d81e !important;
 }
 .green2{
-    background-color: #95c942 !important;
+    background-color: #7ab619 !important;
 }
 .yellow{
-    background-color: #e4cc61 !important;
+    background-color: #eed04d !important;
 }
 .blue{
-    background-color: #539fdd !important;
+    background-color: #3f97df !important;
 }
 .white{
     background-color: #e6e6e6 !important;
@@ -85,13 +99,13 @@
     padding-left: 15px;
 }
 #list{
-    display: flex;
+    /* display: flex; */
     list-style: none;
 }
 #list li {
-    width: 25px;
-    height: 25px;
-    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
     color: black;
     font-weight: bold;
     border: 1px solid #000;
@@ -102,6 +116,8 @@
 }
 button{
     border-radius: 0px !important;
+    padding: 2px !important;
+    background: #043b68 !important;
 }
 .coincidences-float{
     font-size: 16px;
