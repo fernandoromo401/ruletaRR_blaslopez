@@ -1,5 +1,5 @@
-.navpro{
-    background-color: rgb(236, 236, 236);
+.navpro {
+  background-color: rgb(236, 236, 236);
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -9,119 +9,119 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
-.grid{
-    width: 100%;
-    background-color: rgb(230, 230, 230);
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    flex-direction: column;
-    height: 120px;
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid #000;
-    position: relative;
+.grid {
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  flex-direction: column;
+  height: 120px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #000;
+  position: relative;
 }
-.grid .title{
-    height: 100%;
-    width: 10%;
-    /* background-color: rgb(44, 44, 44); */
-    /* color: white; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 800;
-    font-size: 24px;
-}
-
-.grid .body{
-    padding-left: 5px;
-}
-.grid .body .coincidences{
-    display: flex;
-}
-.grid .body .coincidences .item-co{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 23px;
-    height: 23px;
-    background-color: white;
-    color: black;
-    margin: .5px;
-    font-size: 18px;
-    font-weight: 500;
-}
-.grid .body .coincidences .item-co-white{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 23px;
-    height: 23px;
-    background-color: #202020;
-    color: white;
-    margin: .5px;
-    font-size: 18px;
-}
-.red{
-    background-color: #fd5151 !important;
-}
-.green{
-    background-color: #69d81e !important;
-}
-.green2{
-    background-color: #7ab619 !important;
-}
-.yellow{
-    background-color: #eed04d !important;
-}
-.blue{
-    background-color: #3f97df !important;
-}
-.white{
-    background-color: #e6e6e6 !important;
-}
-.grid .body .positives{
-    display: flex;
+.grid .title {
+  height: 100%;
+  width: 10%;
+  /* background-color: rgb(44, 44, 44); */
+  /* color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 24px;
 }
 
-.grid .body .negatives{
-    display: flex;
+.grid .body {
+  padding-left: 5px;
+}
+.grid .body .coincidences {
+  display: flex;
+}
+.grid .body .coincidences .item-co {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23px;
+  height: 23px;
+  background-color: white;
+  color: black;
+  margin: 0.5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.grid .body .coincidences .item-co-white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23px;
+  height: 23px;
+  background-color: #202020;
+  color: white;
+  margin: 0.5px;
+  font-size: 18px;
+}
+.red {
+  background-color: #c20000 !important;
+}
+.green {
+  background-color: #06bf00 !important;
+}
+.green2 {
+  background-color: #7ab619 !important;
+}
+.yellow {
+  background-color: #d1ce02 !important;
+}
+.blue {
+  background-color: #0066bf !important;
+}
+.white {
+  background-color: #e6e6e6 !important;
+}
+.grid .body .positives {
+  display: flex;
 }
 
-.input{
-    font-size: 14px;
-    font-weight: bold;
-    border: 0.5px solid rgb(148, 148, 148);
-    padding-left: 15px;
+.grid .body .negatives {
+  display: flex;
 }
-#list{
-    /* display: flex; */
-    list-style: none;
+
+.input {
+  font-size: 14px;
+  font-weight: bold;
+  border: 0.5px solid rgb(148, 148, 148);
+  padding-left: 15px;
+}
+#list {
+  /* display: flex; */
+  list-style: none;
 }
 #list li {
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
-    color: black;
-    font-weight: bold;
-    border: 1px solid #000;
-    margin: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  border: 1px solid #000;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-button{
-    border-radius: 0px !important;
-    padding: 2px !important;
-    background: #043b68 !important;
+button {
+  border-radius: 0px !important;
+  padding: 2px !important;
+  background: #043b68 !important;
 }
-.coincidences-float{
-    font-size: 16px;
-    position: absolute;
-    top: 3px;
-    right: 5px;
+.coincidences-float {
+  font-size: 16px;
+  position: absolute;
+  top: 3px;
+  right: 5px;
 }
