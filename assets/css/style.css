@@ -14,12 +14,12 @@ input[type="number"] {
 }
 .grid {
   width: 100%;
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(252, 252, 252);
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  height: 120px;
+  /* flex-direction: column; */
+  height: 130px;
   padding: 5px;
   border-radius: 3px;
   border: 1px solid #000;
@@ -27,7 +27,7 @@ input[type="number"] {
 }
 .grid .title {
   height: 100%;
-  width: 10%;
+  width: 5%;
   /* background-color: rgb(44, 44, 44); */
   /* color: white; */
   display: flex;
@@ -39,6 +39,7 @@ input[type="number"] {
 
 .grid .body {
   padding-left: 5px;
+  width: 95%;
 }
 .grid .body .coincidences {
   display: flex;
@@ -47,8 +48,8 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 23px;
-  height: 23px;
+  width: 28px;
+  height: 28px;
   background-color: white;
   color: black;
   margin: 0.5px;
@@ -59,8 +60,8 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 23px;
-  height: 23px;
+  width: 28px;
+  height: 28px;
   background-color: #202020;
   color: white;
   margin: 0.5px;
@@ -101,15 +102,19 @@ input[type="number"] {
 #list {
   /* display: flex; */
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5px;
 }
 #list li {
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
+  width: 100%;
+  height: 25px;
+  font-size: 20px;
+  font-weight: 600;
   color: black;
   font-weight: bold;
   border: 1px solid #000;
-  margin: 3px;
+  margin: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,4 +129,16 @@ button {
   position: absolute;
   top: 3px;
   right: 5px;
+}
+
+.btn-primary{
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.config{
+  position: absolute;
+  left: 0;
+  top: -15px;
+  width: 50px
 }

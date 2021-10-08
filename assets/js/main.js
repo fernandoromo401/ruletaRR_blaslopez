@@ -1,19 +1,47 @@
-// console.log(payroll)
 let numberArray = []
 const list = document.getElementById("list")
 const numberInput = document.getElementById("number")
 const resultNumber = document.getElementById("resultSearch")
 let resultHtml = document.getElementById("result")
+const maxInput = document.getElementById('max')
+const minInput = document.getElementById('min')
 const tableOrder = [0, 26, 3, 35, 12, 28, 7, 29, 18, 22, 9, 31, 14, 20, 1, 33, 16, 24, 5, 10, 23, 8, 30, 11, 36, 13, 27, 6, 34, 17, 25, 2, 21, 4, 19, 15, 32]
+let maxNumberInput = 20
+let minNumberOutput = 6
+
+
+const getConfigValue = () => {
+    const minStorage = localStorage.getItem('min')
+    const maxStorage = localStorage.getItem('max')
+    if (!minStorage || !maxStorage) {
+        localStorage.setItem('min', minNumberOutput)
+        localStorage.setItem('max', maxNumberInput)
+
+    }
+    else{
+       minNumberOutput = minStorage
+       maxNumberInput = maxStorage
+    }
+    minInput.value = minNumberOutput
+    maxInput.value = maxNumberInput
+}
+
+const saveConfig = () => {
+
+    localStorage.setItem('min', minInput.value)
+    localStorage.setItem('max', maxInput.value)
+    alert("Se guardó la configuración con éxito")
+    window.location.reload()
+}
 
 const submitNumber = () => {
     if (numberInput.value >= 0 && numberInput.value <= 36) {
-        if (numberArray.length < 9) {
+        if (numberArray.length < maxNumberInput) {
             // const verification = verifyNumbersArray(numberArray, numberInput.value)
             const verification = true
             if (verification == true) {
                 numberArray.push(parseInt(numberInput.value, 10))
-                if (numberArray.length == 9) {
+                if (numberArray.length == maxNumberInput) {
                     const resultSearch = searchPayrrolls(numberArray)
                     console.log(resultSearch);
                     renderResult(resultSearch)
@@ -30,7 +58,7 @@ const submitNumber = () => {
             if (verification == true) {
                 numberArray.splice(0, 1)
                 numberArray.push(parseInt(numberInput.value, 10))
-                if (numberArray.length == 9) {
+                if (numberArray.length == maxNumberInput) {
                     const resultSearch = searchPayrrolls(numberArray)
                     console.log(resultSearch);
                     preRenderResult()
@@ -96,7 +124,7 @@ const searchPayrrolls = (arrayNumbers) => {
                 coincidencesNumbers.push(newArray[j])
             }
         }
-        if (coincidences >= 4) {
+        if (coincidences >= minNumberOutput) {
             result.push({ name: payroll[i].name, numberCoincidence: coincidencesNumbers, coincidences: coincidences, data: payroll[i].data })
         }
         // console.log(coincidencesNumbers);
@@ -125,7 +153,7 @@ const renderResult = result => {
     // resultNumber.innerHTML = ` = ${result.length}`
     for (let i = 0; i < result.length; i++) {
         let html = `
-        <div class="grid mt-2">
+        <div class="grid mt-1">
             <div class="title">${result[i].name}</div>
             <div class="body">
                 <div class="coincidences">`
@@ -241,3 +269,6 @@ const renderResult = result => {
         resultHtml.innerHTML = "<h3>NO SE ENCONTRARON RESULTADOS</h3>"
     }
 }
+
+
+getConfigValue()
